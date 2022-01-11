@@ -1,6 +1,6 @@
-## Difficulity dropdown levels
+## Difficulty dropdown levels
 
-`const difficulityOptions = ["Any difficulty", "Easy", "Medium", "Hard"];`
+`const difficultyOptions = ["Any difficulty", "Easy", "Medium", "Hard"];`
 
 ## Dropdown render function
 
