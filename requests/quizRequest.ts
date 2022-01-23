@@ -57,8 +57,14 @@ const mapToQuestions = (responseJson: ApiQuizResponse): Question[] => {
   });
 };
 
-export const createQuiz = async (amount: number) => {
+export const createQuiz = async (
+  amount: number,
+  difficulty: string | undefined
+) => {
   let url = `https://opentdb.com/api.php?amount=${amount}`;
+  if (difficulty) {
+    url += `&difficulty=${difficulty.toLocaleLowerCase()}`;
+  }
   const response = await fetch(url);
   const responseJson: ApiQuizResponse = await response.json();
   if (responseJson.responseCode > 0) {
